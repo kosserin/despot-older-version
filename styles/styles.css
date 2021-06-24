@@ -1808,4 +1808,8 @@ footer .copyright p a {
 body, html {
   overflow-x: hidden;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 /*# sourceMappingURL=styles.css.map */
