@@ -1,0 +1,1077 @@
+@import 'colors';
+@import 'media-queries';
+
+main{
+
+    #first{
+        background: black;
+        padding: 100px 0;
+
+        p{
+            text-align: center;
+            width: 50vw;
+            margin: 0 auto;
+            font-size: 2.5rem;
+            color: $brown;
+            font-weight: 400;
+
+            @include laptop{
+                width: 65vw;
+            }
+
+            @include mini{
+                width: 80vw;
+                font-size: 2rem;
+            }
+            
+            @include phone{
+                font-size: 1.5rem;
+                width: 85vw;
+            }
+        }
+
+        .button{
+            display: flex;
+            justify-content: center;
+            margin: 80px 0 0 0;
+
+            @include phone{
+                margin-top: 30px;
+            }
+
+            a{
+                display: inline-block;
+                padding: 1rem 3rem;
+                border: 2.5px solid $brown;
+                color: $black;
+                background: $brown;
+                text-decoration: none;
+                transition: all 300ms ease;
+
+                &:hover{
+                    background: transparent;
+                    color: $brown;
+                    transition: all 300ms ease;
+                }
+            }
+        }
+    }
+
+    #second{
+        position: relative;
+        padding: 90px 0 150px 0;
+        background: $black;
+
+        @include tablet{
+            padding-bottom: 250px;
+        }
+
+        @include fold{
+            padding-bottom: 350px;
+        }
+
+/*         .about-color{
+            background: $white;
+            width: 55vw;
+            height: 75vh;
+            position: absolute;
+            z-index: 1;
+            margin-left: 13.5vw;
+            top: 18vh;
+        } */
+
+        .about-image{
+            width: 60vw;
+            height: 70vh;
+            background: url('../assets/pozadina1.jpg') 0% 0% no-repeat;
+            background-size: cover;
+            z-index: 2;
+            position: relative;
+            margin-left: 15vw;
+            margin-top: 8vh;
+            
+            @include laptop{
+                width: 80vw;
+                margin-left: 10vw;
+            }
+
+            @include phone{
+                width: 90vw;
+                margin-left: 5vw;
+                height: 50vh;
+            }
+        }
+
+        .about-text{
+            width: 450px;
+            color: $black;
+            position: absolute;
+            bottom: 50px;
+            z-index: 3;
+            background: $brown;
+            right: 150px;
+            padding: 2rem;
+            text-align: center;
+
+            @include laptop{
+                right: 50px;
+            }
+
+            @include mini{
+                width: 400px;
+                padding: 2rem 1rem;
+            }
+
+            @include phone{
+                bottom: 30px;
+                right: 30px;
+                width: 300px;
+            }
+
+            @include fold{
+                width: 250px;
+                bottom: 70px;
+            }
+
+            h1{
+                margin-bottom: 20px;
+                color: $red;
+                font-size: 2.2rem;
+
+                @include phone{
+                    font-size: 1.8rem;
+                }
+
+                @include fold{
+                    font-size: 1.3rem;
+                }
+            }
+
+            p{
+                width: 80%;
+                margin: 0 auto;
+
+                @include phone{
+                    font-size: .9rem;
+                    width: 100%;
+                }
+            }
+
+            .button{
+
+                a{
+                    display: flex;
+                    text-decoration: none;
+                    text-align: center;
+                    align-items: center;
+                    color: $red;
+                    font-weight: 500;
+                    margin-top: 30px;
+                    justify-content: flex-end;
+
+                    @include phone{
+                        font-size: .9rem;
+                    }
+
+                    &:hover i{
+                        transform: translateX(10px);
+                        transition: transform 300ms ease;
+                    }
+
+                    i{
+                        margin-left: 5px;
+                        transition: transform 300ms ease;
+                    }
+                }
+            }
+        }
+    }
+
+#third{
+    background: $black;
+    padding: 100px 0;
+
+    h1{
+        color: $red;
+        text-align: center;
+        font-size: 4rem;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        position: relative;
+
+        @include tablet{
+            font-size: 3rem;
+        }
+
+        @include phone{
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+    }
+
+    .third-container{
+
+        .icons{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 80vw;
+            margin: 0 auto;
+            text-align: center;
+            align-items: center;
+            grid-gap: 30px;
+
+            @include laptop{
+                width: 90vw;
+                grid-gap: 10px;
+            }
+
+            @include mini{
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include phone{
+                width: 70vw;
+                grid-template-columns: 1fr;
+                grid-gap: 30px;
+            }
+
+            .icon-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 5px;
+
+                padding: 1rem;  
+                border-radius: 40px;  
+                /* background: $brown;     */  
+                box-shadow: 1px 2px 4px 0px $brown;
+                -webkit-box-shadow: 1px 2px 4px 0px $brown;
+                -moz-box-shadow: 1px 2px 4px 0px $brown;  
+            }
+
+            .icon{
+                width: 100px;
+                padding: 1.8rem;
+                background: $brown;
+                display: flex;
+                margin: 10px 0 0 0;
+                border-radius: 50%;
+                min-height: 100px;
+                transition: all 400ms ease;
+                cursor: pointer;
+
+                &:hover{
+
+                    background: $red;
+                    transition: all 400ms ease;
+                    cursor: pointer;
+                }
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            h3{
+                color: $red;
+                width: 100%;
+                margin: 10px auto 0 auto;
+                font-size: 1.2rem;
+                font-weight: 500;
+                min-height: 85px;
+
+                @include phone{
+                    min-height: min-content;
+                    margin-bottom: 10px;
+                    font-size: 1rem;
+                }
+            }
+
+            p{
+                color: $brown;
+                width: 100%;
+                margin: 0 auto;
+                min-height: 250px;
+                font-size: .9rem;
+
+                @include laptop{
+                    min-height: 280px;
+                }
+
+                @include phone{
+                    padding-bottom: 1rem;
+                    min-height: min-content;
+                    font-size: .85rem;
+                }
+            }
+        }
+    }
+}
+}
+
+#fourth{
+    background: $brown;
+    padding: 200px 0 100px 0;
+
+    h1{
+        font-size: 4rem;
+        text-align: center;
+        color: $black;
+
+        @include tablet{
+            font-size: 3rem;
+        }
+    }
+
+    &>p{
+        text-align: center;
+        width: 45%;
+        margin: 10px auto;
+        color: rgba($black,.8);
+
+        @include tablet{
+            width: 70%;
+            font-size: .9rem;
+        }
+
+        .title-span{
+            font-weight: 500;
+
+            .despot-span{
+                color: $red;
+            }
+        }
+    }
+
+    .coaches{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        grid-row-gap: 50px;
+        width: 70vw;
+        margin: 50px auto;
+        grid-column-gap: 20px;
+
+        @include laptop{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include tablet{
+            grid-template-columns: 1fr;
+        }
+
+        .coach{
+            width: 350px;
+            padding: 0 0 2rem 0;
+            box-shadow: 4px 3px 12px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 4px 3px 12px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 4px 3px 12px 0px rgba(0,0,0,0.75);
+            
+            @include phone{
+                width: 300px;
+            }
+/*   */
+
+            img{
+                width: 100%;
+                height: 350px;
+    /*                 border-top-left-radius: 40px;
+                    border-top-right-radius: 40px; */
+            }
+
+            h2{
+                text-align: center;
+                color: $black;
+                padding: 1rem;
+                font-size: 1.8rem;
+            }
+
+            .container{
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 0;
+                font-size: .9rem;
+                width: 90%;
+                margin: 0 auto;
+                border-bottom: 1px solid $black;
+
+
+                .left{
+                    color: rgba($black,.8);
+                    font-size: .9rem;
+                }
+
+                .right{
+                    font-weight: 500;
+                }
+            }
+
+/*             .first{
+                background: $black;
+
+                .left{
+                    color: rgba($color:$brown, $alpha: .7);
+                }
+
+                .right{
+                    font-weight:500;
+                    color: $brown;
+                }
+
+            }
+
+            .second{
+                background: $brown;
+                color: $black;
+
+                .left{
+                    color: rgba($color:$black, $alpha: .7);
+                }
+
+                .right{
+                    font-weight:500;
+                }
+
+            }
+
+            .third{
+                background: $black;
+                color: $brown;
+
+                .left{
+                    color: rgba($color:$brown, $alpha: .8);
+                }
+
+                .right{
+                    font-weight:500;
+                }
+            } */
+        }
+    }
+}
+
+.right-arrow-container{
+
+    &:hover i{
+        transform: translateX(5px);
+        transition: transform 400ms ease;
+    }
+
+    i{
+        transform: translateY(1px);
+        font-size: .8rem;
+        margin-left: 5px;
+        transition: transform 400ms ease;
+    }
+    }
+
+
+    #fifth{
+
+        background: $brown;
+        padding: 150px 0;
+        margin: 0 auto;
+
+        h1{
+            margin-bottom: 50px;
+            font-size: 4rem;
+            text-align: center;
+
+            @include tablet{
+                font-size: 3rem;
+            }
+
+            @include phone{
+                font-size: 2rem;
+            }
+        }
+
+        table{
+
+            margin: 0 auto;
+            border-collapse: collapse;
+            tr{
+
+                th{
+                    width: 100px;
+                    border: 1px solid $black;
+                    background: $black;
+                    color: $brown;
+                    font-weight: 600;
+                    font-size: .9rem;
+
+                    @include phone{
+                        font-size: .6rem;
+                    }
+
+                    @include fold{
+                        font-size: .5rem;
+                        font-weight: 500;
+                    }
+                }
+
+                td{
+                    border: 1px solid $black;
+                    font-size: .9rem;
+                    text-align: center;
+                    color: $black;
+                    @include tablet{
+                        font-size: .6rem;
+                    }
+                }
+
+                td:nth-child(1),  td:nth-child(2){
+                    
+                    @include phone{
+                        font-size: .5rem;
+                    }
+                }
+
+                td:first-of-type{
+                    font-weight: 500;
+                }
+
+                &:nth-child(even){
+                    background: rgba($black,.1);
+                }
+            }
+        }
+    }
+
+    .gallery {
+        background: $black;
+        padding-bottom: 200px;
+        padding-top: 200px;
+
+        h1{
+            font-size: 4rem;
+            color: $brown !important;
+            text-align: center;
+            padding-bottom: 80px;
+
+            @include tablet{
+                font-size: 3rem;
+            }
+
+            @include phone{
+                font-size: 2rem;
+            }
+        }
+        
+        @include phone{
+            padding-bottom: 5vh;
+        }
+        & .containerr{
+            display: grid;
+            grid-template: "a b c d"
+                           "e f g h"
+                           "i j k l ";
+            
+            width: 90vw;
+            grid-column-gap: 5px;
+            margin: 0 auto;
+            justify-content: space-evenly;
+        }
+        & .containerr a{
+            width: 100%;
+        }
+        & .containerr a img{
+            width: 100%;
+            opacity: .85;
+        }
+        & .containerr a img:hover{
+            opacity: 1;
+        }
+        & .popup{
+            width: 60vw;
+            margin: 0 20vw;
+            position: fixed;
+            top: 10vh;
+            outline: 1px solid black;
+            display: none;
+            z-index: 100;
+            @include tablet{
+                width: 100vw;
+                margin: 0;
+            }
+        }
+        & .popup img{
+            width: 100%;
+            height: 100%;
+        }
+        & .fa-times{
+            position: fixed;
+            right: 17.5vw;
+            top: 6vh;
+            border: none;
+            cursor: pointer;
+            font-size: 2rem;
+            background: $red;
+            padding: 1rem 1.1rem;
+            border-radius: 50%;
+            transition: all 200ms ease;
+            @include tablet{
+                right: 0vw;
+                font-size: 1rem;
+            }
+            &:hover{
+                background: $black;
+                color: $red;
+                transition: all 200ms ease;
+            }
+        }
+        & .visible{
+            display: block;
+        }
+        & .arrow-left,& .arrow-right{
+            position: absolute;
+            top: 50%;
+            color: $white;
+            background: black;
+            padding: 1rem 1.2rem;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 250ms ease;
+            &:hover{
+                background: $red;
+                color: $black;
+                transition: 250ms ease;
+            }
+        }
+        & .arrow-left{
+            left: 5%;
+        }
+        & .arrow-right{
+            right: 5%;
+        }
+        
+        & .containerr h1,& .containerr p{
+            display: none;
+        }
+    }
+    .a{
+        grid-area: a;
+    }
+    .b{
+        grid-area: b;
+    }
+    .c{
+        grid-area: c;
+    }
+    .d{
+        grid-area: d;
+    }
+    .e{
+        grid-area: e;
+    }
+    .f{
+        grid-area: f;
+    }
+    .g{
+        grid-area: g;
+    }
+    .h{
+        grid-area: h;
+    }
+    .i{
+        grid-area: i;
+    }
+    .j{
+        grid-area: j;
+    }
+    .k{
+        grid-area: k;
+    }
+    .l{
+        grid-area: l;
+    }
+    .gallery-social{
+        margin-top: 5vh;
+        text-align: center;
+        font-weight: 400;
+        & p{
+            color: $brown;
+            font-size: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+
+            @include tablet{
+                width: 70%;
+                margin: 0 auto;
+                font-size: 1.2rem;
+            }
+
+            @include phone{
+                font-size: .9rem;
+            }
+        }
+        & i{
+            margin:20px 10px 0 10px;
+            font-size: 1.5rem;
+            transition: 300ms ease;
+            color: $black;
+            padding: 1rem;
+            border-radius: 50%;
+            background: $brown;
+            transition: all 400ms ease;
+            
+            &:hover{
+                background: $red;
+                transition: all 400ms ease;
+            }
+            @include phone{
+                font-size: 1rem;
+                padding: .6rem;
+            }
+        }
+
+        .fa-facebook-f{
+            padding: 1rem 1.2rem;
+
+            @include phone{
+                padding: .6rem .7rem;
+            }
+        }
+    }
+
+    #seventh{
+        width: 100vw;
+        margin: 0 auto;
+        min-height: 80vh;
+        background: linear-gradient(to bottom, rgba($black,.6), rgba($black,.6), rgba($black,.6), rgba($black,.6), rgba($black,.6)),url('../assets/201426104_184741956988731_621070548338664487_n.jpg') no-repeat 0% 30%;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-attachment: fixed;
+
+        .text-container{
+            background: rgba($brown,.5);
+            width: 40%;
+            margin: 0 auto;
+            padding: 3rem;
+            text-align: center;
+
+            @include mini{
+                width: 70%;
+            }
+
+            @include phone{
+                width: 80%;
+            }
+
+            @include fold{
+                width: 90%;
+                padding: 1.5rem;
+            }
+
+            h1{
+                font-size: 4rem;
+                color: $black;
+
+                @include laptop{
+                    font-size: 3rem;
+                }
+
+                @include tablet{
+                    font-size: 2.4rem;
+                }
+
+                @include phone{
+                    font-size: 2rem;
+                }
+
+                @include fold{
+                    font-size: 1.4rem;
+                }
+            }
+
+            p{
+                color: $black;
+                margin: 20px 0 30px 0;
+
+                @include phone{
+                    font-size: .9rem;
+                }
+            }
+
+            .button{
+
+                @include fold{
+                    padding-bottom: 20px;
+                }
+                a{            
+                    background: transparent;
+                    color: $black;
+                    padding: .7rem 2rem;
+                    border: 3px solid $black;
+                    transition: all 300ms ease;
+                    text-decoration: none;
+
+                    @include phone{
+                        font-size: .9rem;
+                    }
+        
+                    &:hover{
+                        background: $black;
+                        color: $brown;
+                        transition: all 300ms ease;
+                    }
+            }
+            }
+        }
+
+
+    }
+
+#eight{
+    background: $brown;
+    padding: 50px 0 450px 0;
+    position: relative;
+    width: 100vw;
+
+    @include tablet{
+        padding-bottom: 700px;
+    }
+    
+    &>h1{
+        font-size: 4rem;
+        color: $black;
+        text-align: center;
+        margin-bottom: 100px;
+
+        @include tablet{
+            margin-bottom: 0px;
+        }
+    }
+
+    .contact-container{
+        padding-top: 100px;
+        width: 500px;
+        margin-left: 50px;
+
+        @include laptop{
+            margin-left: 20px;
+        }
+
+        @include tablet{
+            
+        }
+
+        .group{
+
+            display: flex;
+            margin: 15px 0;
+
+            i{
+                font-size: 1.3rem;
+                margin-right: 5px;
+            }
+
+            a{
+                text-decoration: none;
+                color: $red;
+
+                @include laptop{
+                    font-size: .9rem;
+                }
+            }
+
+            span{
+                margin-right: 5px;
+
+                @include laptop{
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+
+
+    .text-container{
+        color: $brown;
+        width: 100vw;
+        color: $brown;
+        background: $black;
+        position: absolute;
+        bottom: 0;
+        padding: 2rem 7rem 15rem 7rem;
+        left: 0;
+
+        @include laptop{
+            padding: 7rem 4rem;
+        }
+
+        @include mini{
+            padding: 7rem 2rem;
+        }
+
+        @include tablet{
+            position: static;
+        }
+
+        h1{
+            font-size: 3rem;
+            width: 60%;
+
+            @include laptop{
+                font-size: 2.5rem;
+                width: 50%;
+            }
+
+            @include mini{
+                width: 40%;
+                font-size: 2rem;
+            }
+
+            @include tablet{
+                width: 100%;
+            }
+        }
+
+        p{
+            width: 40%;
+
+            @include mini{
+                width: 30%;
+                font-size: .9rem;
+            }
+
+            @include tablet{
+                width: 80%;
+                margin-top: 10px;
+            }
+        }
+    }
+
+
+    .form-container{
+        position: absolute;
+        right: 50px;
+        padding: 2rem;
+        box-shadow: 4px 3px 12px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 4px 3px 12px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 3px 12px 0px rgba(0,0,0,0.75);
+        top:250px;
+        width: 500px;
+        background: $brown;
+
+        @include mini{
+            width: 400px;
+        }
+
+        @include tablet{
+            top: 780px;
+        }
+
+        @include phone{
+            right: 10px;
+            width: 350px;
+        }
+
+        @include fold{
+            right: 10px;
+            width: 300px;
+        }
+
+          form{
+
+            background: $brown;
+
+            .big-group{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+    
+                .group{
+                    display: flex;
+                    width: 100%;
+
+                    @include tablet{
+                        width: 45%;
+                    }
+                }
+    
+                .first{
+                    margin-right: 20px;
+                }
+            }
+    
+            .group{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+                
+                label{
+                    font-size: .9rem;
+                    cursor: pointer;
+                }
+    
+                input{
+                    height: 30px;
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                    border-bottom: 2px solid $black;
+                    border-right: 2px solid $black;
+    
+                    &::placeholder{
+                        color: rgba($black,.5);
+                        font-size: 1rem;
+                    }
+                }
+    
+                textarea{
+                    padding: 1rem;
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                    border: 2px solid $black;
+    
+                    &::placeholder{
+                        color: rgba($black,.5);
+                        font-size: 1rem;
+                    }
+                }
+            }
+    
+            .button{
+                display: flex;
+                margin-top: 30px;
+                justify-content: center;
+    
+                input{
+                    background: transparent;
+                    border: black;
+                    border: 2px solid $black;
+                    padding: 1rem 2rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    transition: all 400ms ease;
+    
+                    &:hover{
+                        background: $black;
+                        color: $brown;
+                        transition: all 400ms ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#ninth{
+    background: $brown;
+
+    iframe{
+        width: 100vw;
+        height: 500px;
+
+        @include tablet{
+            height: 300px;
+        }
+    }
+
+
+}
