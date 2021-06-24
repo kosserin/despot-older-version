@@ -154,7 +154,7 @@
             bottom: 0;
 
             @include tablet{
-                width: 40vw;
+                width: 50vw;
                 height: 60vh;
             }
         }
@@ -548,8 +548,8 @@
                 }
 
                 @include phone{
-                    top: 850px;
-                    width: 300px;
+                    top: 870px;
+                    width: 250px;
                     margin-left: auto;
                     margin-right: auto;
                     left: 0;

@@ -551,6 +551,12 @@ main #third h1 {
   }
 }
 
+@media screen and (max-width: 768px) {
+  main #third .third-container h1 {
+    padding-top: 100px;
+  }
+}
+
 main #third .third-container .icons {
   display: -ms-grid;
   display: grid;
@@ -1988,7 +1994,7 @@ header .about-image {
 
 @media screen and (max-width: 768px) {
   header .about-image {
-    width: 40vw;
+    width: 50vw;
     height: 60vh;
   }
 }
@@ -2494,8 +2500,8 @@ header .text-container p {
 
 @media screen and (max-width: 600px) {
   .about-main #accomplished .images-container img:nth-child(2) {
-    top: 850px;
-    width: 300px;
+    top: 870px;
+    width: 250px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
