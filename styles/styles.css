@@ -2367,6 +2367,7 @@ header .text-container p {
 
 @media screen and (max-width: 600px) {
   .about-main #accomplished {
+    padding-top: 0px;
     padding-bottom: 400px;
   }
 }
@@ -2405,7 +2406,6 @@ header .text-container p {
 @media screen and (max-width: 600px) {
   .about-main #accomplished .text-container {
     width: 100%;
-    font-size: .7rem;
     padding-bottom: 150px;
   }
 }
@@ -2429,7 +2429,6 @@ header .text-container p {
 
 @media screen and (max-width: 600px) {
   .about-main #accomplished .text-containerr {
-    font-size: .7rem;
     width: 100%;
     padding-bottom: 150px;
   }
@@ -2500,7 +2499,7 @@ header .text-container p {
 
 @media screen and (max-width: 600px) {
   .about-main #accomplished .images-container img:nth-child(2) {
-    top: 870px;
+    top: 900px;
     width: 250px;
     margin-left: auto;
     margin-right: auto;

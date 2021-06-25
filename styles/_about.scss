@@ -441,6 +441,7 @@
         }
 
         @include phone{
+            padding-top: 0px;
             padding-bottom: 400px;
         }
         
@@ -472,7 +473,6 @@
 
             @include phone{
                 width: 100%;
-                font-size: .7rem;
                 padding-bottom: 150px;
             }
         }
@@ -490,7 +490,6 @@
             }
 
             @include phone{
-                font-size: .7rem;
                 width: 100%;
                 padding-bottom: 150px;
             }
@@ -548,7 +547,7 @@
                 }
 
                 @include phone{
-                    top: 870px;
+                    top: 900px;
                     width: 250px;
                     margin-left: auto;
                     margin-right: auto;
