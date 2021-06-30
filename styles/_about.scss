@@ -20,19 +20,34 @@
             img{
                 width: 70px;
                 height: 70px;
+
+                @include phone{
+                    width: 50px;
+                height: 50px;
+                }
             }
 
             .nav-logo-text{
 
                 h3{
                     color: $red;
-                    font-weight: 700;
+                    font-weight: 400;
+                    text-align: center;
+                    font-size: .9rem;
+
+                    @include phone{
+                        font-style: .8rem;
+                    }
                 }
 
                 h4{
                     color: $brown;
-                    font-weight: 600;
-                    font-size: .85rem;
+                    font-weight: 400;
+                    font-size: .8rem;
+
+                    @include phone{
+                        font-style: .7rem;
+                    }
                 }
             }
         }
@@ -110,8 +125,9 @@
                 background: transparent;
                 color: $brown;
                 padding: .7rem 2rem;
-                border: 3px solid $brown;
+                border: 1px solid $brown;
                 transition: all 300ms ease;
+                font-size: .9rem;
     
                 &:hover{
                     background: $brown;
@@ -146,16 +162,28 @@
         position: relative;
 
         .about-image{
-            background: url('../dsada.png') no-repeat center;
+            background: url('../about.png') no-repeat center;
             background-size: cover;
-            width: 50vw;
+            width: 30vw;
             height: 70vh;
             position: absolute;
             bottom: 0;
+            left: 30vh;
+
+            @include laptop{
+                left: 10vh;
+                width: 45vw;
+            }
 
             @include tablet{
                 width: 50vw;
                 height: 60vh;
+                left: 5vh;
+            }
+
+            @include phone{
+                left: 5vh;
+                background-position: 40% 0%;
             }
         }
 
@@ -516,7 +544,7 @@
                 }
 
                 @include phone{
-                    top: 450px;
+                    top: 28%;
                     width: 280px;
                     margin-left: auto;
                     margin-right: auto;
@@ -526,7 +554,7 @@
                 }
 
                 @include fold{
-                    top: 520px;
+                    top: 30%;
                     width: 250px;
                 }
             }
@@ -547,7 +575,7 @@
                 }
 
                 @include phone{
-                    top: 900px;
+                    top: 64%;
                     width: 250px;
                     margin-left: auto;
                     margin-right: auto;
@@ -558,7 +586,7 @@
 
                 @include fold{
                     width: 250px;
-                    top: 950px;
+                    top: 65%;
                 }
             }
 

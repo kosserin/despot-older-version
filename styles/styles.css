@@ -10,7 +10,8 @@ header .header-image {
   position: absolute;
   width: 50%;
   height: 75vh;
-  background: url("../assets/pozadina2.jpg") no-repeat center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2))), url("../assets/pozadina2.jpg") no-repeat center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2)), url("../assets/pozadina2.jpg") no-repeat center;
   top: 15vh;
   right: 5vh;
   background-size: cover;
@@ -26,10 +27,21 @@ header .header-image {
 
 @media screen and (max-width: 600px) {
   header .header-image {
+    /*        
+            height: 40vh;
+            width: 80%;
+            top: 60vh;
+            right: 5vh;
+            */
+    top: 340px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 80vw;
     height: 40vh;
-    width: 80%;
-    top: 60vh;
-    right: 5vh;
   }
 }
 
@@ -64,15 +76,24 @@ header nav .nav-logo img {
   height: 70px;
 }
 
+@media screen and (max-width: 600px) {
+  header nav .nav-logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 header nav .nav-logo .nav-logo-text h3 {
   color: #d53036;
-  font-weight: 700;
+  font-weight: 400;
+  text-align: center;
+  font-size: .9rem;
 }
 
 header nav .nav-logo .nav-logo-text h4 {
   color: #d2af6d;
-  font-weight: 600;
-  font-size: .85rem;
+  font-weight: 400;
+  font-size: .8rem;
 }
 
 header nav .burger {
@@ -173,9 +194,10 @@ header nav .burger {
   background: transparent;
   color: #d2af6d;
   padding: .7rem 2rem;
-  border: 3px solid #d2af6d;
+  border: 1px solid #d2af6d;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+  font-size: .9rem;
 }
 
 .nav-links li .contact-tag:hover {
@@ -223,11 +245,13 @@ header nav .burger {
 @media screen and (max-width: 600px) {
   .header-container {
     width: 100%;
+    margin-top: 1vh;
+    margin-left: 0;
   }
 }
 
 .header-container h1 {
-  font-size: 4rem;
+  font-size: 4.3rem;
   font-weight: 700;
 }
 
@@ -239,7 +263,8 @@ header nav .burger {
 
 @media screen and (max-width: 600px) {
   .header-container h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    text-align: center;
   }
 }
 
@@ -255,12 +280,29 @@ header nav .burger {
 
 .header-container p {
   margin: 20px 0 40px 0;
-  width: 70%;
+  width: 60%;
+  font-size: .9rem;
+  font-weight: 100;
+  font-style: italic;
 }
 
 @media screen and (max-width: 600px) {
   .header-container p {
-    font-size: .85rem;
+    font-size: .8rem;
+    text-align: center;
+    margin: 20px auto 20px auto;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-container .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -268,16 +310,11 @@ header nav .burger {
   background: transparent;
   color: #d2af6d;
   padding: .7rem 2rem;
-  border: 3px solid #d2af6d;
+  border: 1px solid #d2af6d;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   text-decoration: none;
-}
-
-@media screen and (max-width: 600px) {
-  .header-container .button a {
-    font-size: .9rem;
-  }
+  font-size: .9rem;
 }
 
 @media screen and (max-width: 970px) {
@@ -298,13 +335,23 @@ main #first {
   padding: 100px 0;
 }
 
+@media screen and (max-width: 600px) {
+  main #first {
+    padding: 20px 0;
+  }
+}
+
 main #first p {
   text-align: center;
-  width: 50vw;
+  width: 60vw;
   margin: 0 auto;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #d2af6d;
   font-weight: 400;
+}
+
+main #first p span {
+  color: #d53036;
 }
 
 @media screen and (max-width: 1280px) {
@@ -322,7 +369,7 @@ main #first p {
 
 @media screen and (max-width: 600px) {
   main #first p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: 85vw;
   }
 }
@@ -346,17 +393,24 @@ main #first .button {
 main #first .button a {
   display: inline-block;
   padding: 1rem 3rem;
-  border: 2.5px solid #d2af6d;
-  color: #000000;
-  background: #d2af6d;
+  border: 1px solid #d2af6d;
+  color: #d2af6d;
+  background: #000000;
   text-decoration: none;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
+@media screen and (max-width: 600px) {
+  main #first .button a {
+    padding: 1rem 2.5rem;
+    font-style: .8rem;
+  }
+}
+
 main #first .button a:hover {
-  background: transparent;
-  color: #d2af6d;
+  background: #d2af6d;
+  color: #000000;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -391,7 +445,8 @@ main #second {
 main #second .about-image {
   width: 60vw;
   height: 70vh;
-  background: url("../assets/pozadina1.jpg") 0% 0% no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2))), url("../assets/pozadina1.jpg") 0% 0% no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2)), url("../assets/pozadina1.jpg") 0% 0% no-repeat;
   background-size: cover;
   z-index: 2;
   position: relative;
@@ -456,7 +511,7 @@ main #second .about-text {
 
 main #second .about-text h1 {
   margin-bottom: 20px;
-  color: #d53036;
+  color: #000000;
   font-size: 2.2rem;
 }
 
@@ -526,21 +581,28 @@ main #second .about-text .button a i {
 
 main #third {
   background: #000000;
-  padding: 100px 0;
+  padding: 300px 0 100px 0;
 }
 
 main #third h1 {
-  color: #d53036;
+  color: #d2af6d;
   text-align: center;
-  font-size: 4rem;
-  margin-top: 100px;
+  font-size: 6rem;
+  margin-top: 50px;
   margin-bottom: 100px;
   position: relative;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 970px) {
+  main #third h1 {
+    font-size: 5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
   main #third h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
@@ -549,6 +611,16 @@ main #third h1 {
     margin-bottom: 50px;
     font-size: 2.5rem;
   }
+}
+
+@media screen and (max-width: 321px) {
+  main #third h1 {
+    font-size: 2rem;
+  }
+}
+
+main #third .third-container h1 {
+  color: #d2af6d;
 }
 
 @media screen and (max-width: 768px) {
@@ -587,7 +659,7 @@ main #third .third-container .icons {
 
 @media screen and (max-width: 600px) {
   main #third .third-container .icons {
-    width: 70vw;
+    width: 85vw;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-gap: 30px;
@@ -644,8 +716,8 @@ main #third .third-container .icons h3 {
   color: #d53036;
   width: 100%;
   margin: 10px auto 0 auto;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: 400;
   min-height: 85px;
 }
 
@@ -664,7 +736,7 @@ main #third .third-container .icons p {
   width: 100%;
   margin: 0 auto;
   min-height: 250px;
-  font-size: .9rem;
+  font-size: .95rem;
 }
 
 @media screen and (max-width: 1280px) {
@@ -689,7 +761,7 @@ main #third .third-container .icons p {
 }
 
 #fourth h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
   color: #000000;
 }
@@ -874,7 +946,7 @@ main #third .third-container .icons p {
 
 #fifth h1 {
   margin-bottom: 50px;
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
 }
 
@@ -886,7 +958,7 @@ main #third .third-container .icons p {
 
 @media screen and (max-width: 600px) {
   #fifth h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -951,7 +1023,7 @@ main #third .third-container .icons p {
 }
 
 .gallery h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   color: #d2af6d !important;
   text-align: center;
   padding-bottom: 80px;
@@ -960,12 +1032,6 @@ main #third .third-container .icons p {
 @media screen and (max-width: 768px) {
   .gallery h1 {
     font-size: 3rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .gallery h1 {
-    font-size: 2rem;
   }
 }
 
@@ -1324,7 +1390,7 @@ main #third .third-container .icons p {
 }
 
 #eight > h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   color: #000000;
   text-align: center;
   margin-bottom: 100px;
@@ -1333,6 +1399,12 @@ main #third .third-container .icons p {
 @media screen and (max-width: 768px) {
   #eight > h1 {
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #eight > h1 {
+    font-size: 3rem;
   }
 }
 
@@ -1834,15 +1906,36 @@ nav .nav-logo img {
   height: 70px;
 }
 
+@media screen and (max-width: 600px) {
+  nav .nav-logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 nav .nav-logo .nav-logo-text h3 {
   color: #d53036;
-  font-weight: 700;
+  font-weight: 400;
+  text-align: center;
+  font-size: .9rem;
+}
+
+@media screen and (max-width: 600px) {
+  nav .nav-logo .nav-logo-text h3 {
+    font-style: .8rem;
+  }
 }
 
 nav .nav-logo .nav-logo-text h4 {
   color: #d2af6d;
-  font-weight: 600;
-  font-size: .85rem;
+  font-weight: 400;
+  font-size: .8rem;
+}
+
+@media screen and (max-width: 600px) {
+  nav .nav-logo .nav-logo-text h4 {
+    font-style: .7rem;
+  }
 }
 
 nav .burger {
@@ -1943,9 +2036,10 @@ nav .burger {
   background: transparent;
   color: #d2af6d;
   padding: .7rem 2rem;
-  border: 3px solid #d2af6d;
+  border: 1px solid #d2af6d;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+  font-size: .9rem;
 }
 
 .nav-links li .contact-tag:hover {
@@ -1984,18 +2078,34 @@ header {
 }
 
 header .about-image {
-  background: url("../dsada.png") no-repeat center;
+  background: url("../about.png") no-repeat center;
   background-size: cover;
-  width: 50vw;
+  width: 30vw;
   height: 70vh;
   position: absolute;
   bottom: 0;
+  left: 30vh;
+}
+
+@media screen and (max-width: 1280px) {
+  header .about-image {
+    left: 10vh;
+    width: 45vw;
+  }
 }
 
 @media screen and (max-width: 768px) {
   header .about-image {
     width: 50vw;
     height: 60vh;
+    left: 5vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header .about-image {
+    left: 5vh;
+    background-position: 40% 0%;
   }
 }
 
@@ -2459,7 +2569,7 @@ header .text-container p {
 
 @media screen and (max-width: 600px) {
   .about-main #accomplished .images-container img:nth-child(1) {
-    top: 450px;
+    top: 28%;
     width: 280px;
     margin-left: auto;
     margin-right: auto;
@@ -2471,7 +2581,7 @@ header .text-container p {
 
 @media screen and (max-width: 321px) {
   .about-main #accomplished .images-container img:nth-child(1) {
-    top: 520px;
+    top: 30%;
     width: 250px;
   }
 }
@@ -2499,7 +2609,7 @@ header .text-container p {
 
 @media screen and (max-width: 600px) {
   .about-main #accomplished .images-container img:nth-child(2) {
-    top: 900px;
+    top: 64%;
     width: 250px;
     margin-left: auto;
     margin-right: auto;
@@ -2512,7 +2622,7 @@ header .text-container p {
 @media screen and (max-width: 321px) {
   .about-main #accomplished .images-container img:nth-child(2) {
     width: 250px;
-    top: 950px;
+    top: 65%;
   }
 }
 

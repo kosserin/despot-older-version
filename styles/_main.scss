@@ -7,13 +7,21 @@ main{
         background: black;
         padding: 100px 0;
 
+        @include phone{
+            padding: 20px 0;
+        }
+
         p{
             text-align: center;
-            width: 50vw;
+            width: 60vw;
             margin: 0 auto;
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: $brown;
             font-weight: 400;
+
+            span{
+                color: $red;
+            }
 
             @include laptop{
                 width: 65vw;
@@ -25,7 +33,7 @@ main{
             }
             
             @include phone{
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 width: 85vw;
             }
         }
@@ -42,15 +50,20 @@ main{
             a{
                 display: inline-block;
                 padding: 1rem 3rem;
-                border: 2.5px solid $brown;
-                color: $black;
-                background: $brown;
+                border: 1px solid $brown;
+                color: $brown;
+                background: $black;
                 text-decoration: none;
                 transition: all 300ms ease;
 
+                @include phone{
+                    padding: 1rem 2.5rem;
+                    font-style: .8rem;
+                }
+
                 &:hover{
-                    background: transparent;
-                    color: $brown;
+                    background: $brown;
+                    color: $black;
                     transition: all 300ms ease;
                 }
             }
@@ -83,7 +96,7 @@ main{
         .about-image{
             width: 60vw;
             height: 70vh;
-            background: url('../assets/pozadina1.jpg') 0% 0% no-repeat;
+            background: linear-gradient(to right, rgba($black,.2)) ,url('../assets/pozadina1.jpg') 0% 0% no-repeat;
             background-size: cover;
             z-index: 2;
             position: relative;
@@ -135,7 +148,7 @@ main{
 
             h1{
                 margin-bottom: 20px;
-                color: $red;
+                color: $black;
                 font-size: 2.2rem;
 
                 @include phone{
@@ -189,29 +202,40 @@ main{
 
 #third{
     background: $black;
-    padding: 100px 0;
+    padding: 300px 0 100px 0;
 
     h1{
-        color: $red;
+        color: $brown;
         text-align: center;
-        font-size: 4rem;
-        margin-top: 100px;
+        font-size: 6rem;
+        margin-top: 50px;
         margin-bottom: 100px;
         position: relative;
+        font-weight: 600;
+
+        @include mini{
+            font-size: 5rem;
+        }
 
         @include tablet{
-            font-size: 3rem;
+            font-size: 4rem;
         }
 
         @include phone{
             margin-bottom: 50px;
             font-size: 2.5rem;
         }
+
+        @include fold{
+            font-size: 2rem;
+        }
     }
 
     .third-container{
 
         h1{
+            color: $brown;
+
             @include tablet{
                 padding-top: 100px;
             }
@@ -236,7 +260,7 @@ main{
             }
 
             @include phone{
-                width: 70vw;
+                width: 85vw;
                 grid-template-columns: 1fr;
                 grid-gap: 30px;
             }
@@ -282,8 +306,8 @@ main{
                 color: $red;
                 width: 100%;
                 margin: 10px auto 0 auto;
-                font-size: 1.2rem;
-                font-weight: 500;
+                font-size: 1.3rem;
+                font-weight: 400;
                 min-height: 85px;
 
                 @include phone{
@@ -298,7 +322,7 @@ main{
                 width: 100%;
                 margin: 0 auto;
                 min-height: 250px;
-                font-size: .9rem;
+                font-size: .95rem;
 
                 @include laptop{
                     min-height: 280px;
@@ -320,7 +344,7 @@ main{
     padding: 200px 0 100px 0;
 
     h1{
-        font-size: 4rem;
+        font-size: 5rem;
         text-align: center;
         color: $black;
 
@@ -482,7 +506,7 @@ main{
 
         h1{
             margin-bottom: 50px;
-            font-size: 4rem;
+            font-size: 5rem;
             text-align: center;
 
             @include tablet{
@@ -490,7 +514,7 @@ main{
             }
 
             @include phone{
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
         }
 
@@ -552,17 +576,13 @@ main{
         padding-top: 200px;
 
         h1{
-            font-size: 4rem;
+            font-size: 5rem;
             color: $brown !important;
             text-align: center;
             padding-bottom: 80px;
 
             @include tablet{
                 font-size: 3rem;
-            }
-
-            @include phone{
-                font-size: 2rem;
             }
         }
         
@@ -842,13 +862,17 @@ main{
     }
     
     &>h1{
-        font-size: 4rem;
+        font-size: 5rem;
         color: $black;
         text-align: center;
         margin-bottom: 100px;
 
         @include tablet{
             margin-bottom: 0px;
+        }
+
+        @include phone{
+            font-size: 3rem;
         }
     }
 
